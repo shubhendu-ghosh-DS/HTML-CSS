@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            .background {
+                background-color: #f8f410;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                z-index: 10;
+            }
+            .box {
+                position: fixed;
+                height: 60px;
+                width: 60px;
+                top: 0;
+                left: 0;
+                background-color: #27f1f8;
+                border: 5px solid #ae30f7;
+                display: inline-block;
+            }
+            .box:nth-child(1) {
+                animation: olot 4s ease-in-out normal infinite;
+            }
+            .box:nth-child(2) {
+                animation: olot 4s ease-in-out normal .2s infinite;
+            }
+            .box:nth-child(3) {
+                animation: olot 4s ease-in-out normal .4s infinite;
+            }
+            .box:nth-child(4) {
+                animation: olot1 4s ease-in-out normal infinite;
+            }
 
+            .box:nth-child(5) {
+                animation: olot1 4s ease-in-out normal .2s infinite;
+            }
+
+            .box:nth-child(6) {
+                animation: olot1 4s ease-in-out normal .4s infinite;
+            }
+
+            @keyframes olot {
+                25% {
+                    top: 75%;
+                    left: 25%;
+                    transform: rotate(180deg);}
+                50% {
+                    top: 100%;
+                    left: 100%;
+                    transform: rotate(360deg);
+                }
+                75% {
+                    top: 25%;
+                    left: 75%;
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes olot1 {
+                0% {
+                    top: 0%;
+                    left: 100%;
+                }
+                25% {
+                    top: 25%;
+                    left: 25%;
+                    transform: rotate(180deg);}
+                50% {
+                    top: 100%;
+                    left: 0;
+                    transform: rotate(360deg);
+                }
+                75% {
+                    top: 75%;
+                    left: 75%;
+                    transform: rotate(360deg);
+                }
+                100% {
+                    top: 0;
+                    left: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <span class="box"></span>
+            <span class="box"></span>
+            <span class="box"></span>
+            <span class="box"></span>
+            <span class="box"></span>
+            <span class="box"></span>
+        </div>
+
+    </body>
+</html>
