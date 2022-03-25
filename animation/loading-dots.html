@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            :root {
+                --main-color : #dedcde;
+                --point-color : #30f9ff;
+                --size: 5px;
+            }
 
+            .loader {
+                background-color: var(--main-color);
+                overflow: hidden;
+                width: 50%;
+                height: 100%;
+                position: fixed;
+                top: 0 ; left: 0;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                z-index: 100000;
+            }
+            .loader2 {
+                background-color: #dedede;
+                overflow: hidden;
+                width: 50%;
+                height: 100%;
+                position: fixed;
+                top: 0 ; left: 50%;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                z-index: 100000;
+            }
+
+            .loader__element {
+                border-radius: 100%;
+                border: var(--size) solid var(--point-color);
+                margin: calc(var(--size)*2);
+            }
+            .fifth {
+                border-radius: 100%;
+                border: 5px solid #f00;
+            }
+
+            .loader__element:nth-child(1) {
+                animation: preloader .6s ease-in-out alternate infinite;
+            }
+            .loader__element:nth-child(2) {
+                animation: preloader .6s ease-in-out alternate .2s infinite
+            }
+            .loader__element:nth-child(3) {
+                animation: preloader .6s ease-in-out alternate .4s infinite;
+            }
+            .loader__element:nth-child(4) {
+                animation: preloader .6s ease-in-out alternate .6s infinite;
+            }
+            .fifth {
+                animation: bigger 0.6s ease-in-out alternate  infinite
+            }
+            @keyframes preloader {
+                100% {transform:  scale(2);}
+            }
+            @keyframes bigger {
+                100% {transform : scale(2);}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loader">
+            <span class="loader__element"></span>
+            <span class="loader__element"></span>
+            <span class="loader__element"></span>
+            <span class="loader__element"></span>
+        </div>
+        <div class="loader2">
+            <span class="fifth"></span>
+        </div>
+    </body>
+</html>
